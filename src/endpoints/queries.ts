@@ -5,7 +5,10 @@ export const useUserRepos = (username: string) => {
   const { data, isSuccess, isLoading, error, isError } = useQuery(
     ["repos", username],
     async () => {
-      const repos: any = axios(`http://localhost:4000/users/${username}/repos`);
+      //const URL = `http://localhost:4000/users/${username}/repos`
+      const repos: any = axios.post(
+        `https://${window.location.hostname}/.netlify/functions/user_repos`
+      );
       return repos;
     }
   );
