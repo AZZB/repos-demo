@@ -6,8 +6,17 @@ export const useUserRepos = (username: string) => {
     ["repos", username],
     async () => {
       //const URL = `http://localhost:4000/users/${username}/repos`
+
       const repos: any = axios.post(
-        `https://${window.location.hostname}/.netlify/functions/user_repos`
+        `${window.location.origin}/.netlify/functions/user_repos`,
+        {
+          username,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       return repos;
     }
@@ -58,8 +67,17 @@ export const useRepoReadme = (
   const { data, isLoading, isError } = useQuery(
     ["readme", username, repo],
     async () => {
-      const { data: readme } = await axios(
-        `http://localhost:4000/repos/${username}/${repo}/readme`
+      const { data: readme } = await axios.post(
+        `${window.location.origin}/.netlify/functions/repo_readme`,
+        {
+          username,
+          repo,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
       return readme;
     }
