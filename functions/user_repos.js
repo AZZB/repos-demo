@@ -17,9 +17,7 @@ exports.handler = async (event, context) => {
           description: item.description,
           languages_url: item.languages_url,
           language: item.language,
-          owner: {
-            login: item.owner.login,
-          },
+          owner: item.owner.login,
         }))
       ),
     };

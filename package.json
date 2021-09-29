@@ -26,10 +26,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "REACT_APP_MOCK_ENABLED=true craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-netlify": "craco start"
   },
   "eslintConfig": {
     "extends": [
@@ -51,7 +52,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.7",
+    "msw": "^0.35.0",
     "postcss": "^7.0.38",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

@@ -22,8 +22,9 @@ export default function Repos() {
         key={repo.name}
         name={repo.name}
         description={repo.description}
-        languages={languages[repo.name] || [repo.langugage]}
-        owner={repo.owner.login}
+        languages={languages[repo.name] || [repo.language]}
+        owner={repo.owner}
+        url={repo.url}
       />
     ));
   };

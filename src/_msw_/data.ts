@@ -1,0 +1,38 @@
+export const repos = [
+  {
+    id: 1,
+    name: "repo_1",
+    description: "Repo desc",
+    language: "Javascript",
+    languages_url: "",
+    owner: "AZZB",
+    url: "https://github.com/AZZB/100DaysOfCode-twitter-bot",
+  },
+  {
+    id: 2,
+    name: "repo_2",
+    description: "Repo desc",
+    language: "Javascript",
+    languages_url: "",
+    owner: "AZZB",
+    url: "https://github.com/AZZB/100DaysOfCode-twitter-bot",
+  },
+  {
+    id: 3,
+    name: "repo_3",
+    description: "Repo desc",
+    language: "Javascript",
+    languages_url: "",
+    owner: "AZZB",
+    url: "https://github.com/AZZB/100DaysOfCode-twitter-bot",
+  },
+  {
+    id: 4,
+    name: "repo_4",
+    description: "Repo desc",
+    language: "Javascript",
+    languages_url: "",
+    owner: "AZZB",
+    url: "https://github.com/AZZB/100DaysOfCode-twitter-bot",
+  },
+];
