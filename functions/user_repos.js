@@ -18,6 +18,7 @@ exports.handler = async (event, context) => {
           languages_url: item.languages_url,
           language: item.language,
           owner: item.owner.login,
+          url: item.html_url,
         }))
       ),
     };

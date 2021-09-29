@@ -39,7 +39,7 @@ const RepoCard = ({ name, description, languages, owner, url }: Props) => {
           href={url}
           target="_blank"
           rel="noreferrer"
-          className="border border-black ml-2 font-bold text-gray-700 outline-none hover:opacity-80"
+          className="border border-black ml-2 font-bold text-gray-700 outline-none hover:opacity-80 cursor-pointer"
           style={{ fontSize: 11, padding: "5px 25px" }}
         >
           Open repo
