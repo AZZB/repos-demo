@@ -28,7 +28,7 @@
   "scripts": {
     "start": "REACT_APP_MOCK_ENABLED=true craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "REACT_APP_MOCK_ENABLED=true craco test",
     "eject": "react-scripts eject",
     "start-netlify": "craco start"
   },
